@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="/lib/css/main.css" rel="stylesheet">
+  <title>wyo - write your own</title>
+</head>
+<body>
+  <h1 class="logo">cat</h1>
+  <p class="sub">a unix command</p>
+  cat is probably the most basic of unix commands. it takes input in the form of a file, <br/>and outputs the file's contents<br/>
+  if i didn't explain this well enough for you, here's an example: <br/>
+  <br/>
+  assume there is a file called <span class="code">example.txt</span>, and it contains the text <span class="code">Hello, World!</span> <br/>
+  if i wanted to view <span class="code">example.txt</span>'s contents from the terminal, i would type the command <span class="code">cat example.txt</span> <br/>
+  <br />
+  in a terminal, it would look something like this: <br />
+  <br />
+  <div class="shell">
+    <span style="background-color: white;"></span>
+    <span style="color: rgb(90,162,28);">user@machine</span>:<span style="color:rgb(69,108,148)">~</span>$ cat example.txt <br/>
+    Hello, World!
+  </div>
+  <br />
+  today, we're going to implement this command in c++.<br />
+  <h3>step 1: prerequisites</h3>
+  for this project, you'll need a couple of things first.<br/>
+  <br />
+  you'll need: <br />
+  - to be using a unix-based OS like MacOS or Linux (sorry, windows users)<br />
+  - a c++ compiler (i use <span class="code">g++</span>)<br />
+  - make (for building the project)<br />
+  - and a text editor (i use visual studio code)<br />
+  <br/>
+  visual studio code is available <a href="https://code.visualstudio.com/">here</a> <br/>
+  <br/>
+  to install <span class="code">make</span> and <span class="code">g++</span> of these on a ubuntu-based linux system, type <span class="code">sudo apt-get install gcc</span><br/>
+  <br/>
+  on mac, type <span class="code">sudo brew install gcc</span><br/>
+  <br />
+  verify these are installed by typing <span class="code">g++ --version</span> and <span class="code">make --version</span><br/>
+  it should look something like this:
+  <div class="shell">
+    <span style="color: rgb(90,162,28);">user@machine</span>:<span style="color:rgb(69,108,148)">~</span>$ g++ --version<br/>
+    g++ (GCC) 10.3.0
+    Copyright (C) 2020 Free Software Foundation, Inc. <br/>
+    This is free software; see the source for copying conditions.  There is NO <br/>
+    warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. <br/>
+    <span style="color: rgb(90,162,28);">user@machine</span>:<span style="color:rgb(69,108,148)">~</span>$ make --version<br/>
+    GNU Make 4.3<br/>
+    Built for x86_64-pc-linux-gnu<br/>
+    Copyright (C) 1988-2020 Free Software Foundation, Inc.<br/>
+    License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;<br/>
+    This is free software: you are free to change and redistribute it.<br/>
+    There is NO WARRANTY, to the extent permitted by law.<br/>
+  </div>
+
+  <h3>step 2: directory setup</h3>
+  to start off with, open a new folder called whatever you want your program to be called. <br/>
+  inside this folder, create a file named <span class="code">Makefile</span> and a folder named <span class="code">src</span>. <br/>
+  inside <span class="code">src</span>, create a file called 
+  <footer>
+    by <a href="https://github.com/lillupad">lillupad</a> | <a href="https://github.com/lillupad/wyo">source code | <a href="/">back home</a>
+  </footer>
+</body>
+</html>
